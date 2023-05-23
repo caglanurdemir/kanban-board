@@ -59,11 +59,11 @@ const Sidebar = () => {
                 </button>
                 <div className="sidebar-button">
                     <img src={name} alt="Name Surname" />
-                    <div className="user-name">Name Surname</div>
+                    Name Surname
                 </div>
                 <div className="sidebar-button">
                     <img src={company} alt="Company Logo" />
-                    <div className="company">Company</div>
+                    Company
                 </div>
             </div>
         </div>
