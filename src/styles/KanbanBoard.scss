@@ -1,0 +1,28 @@
+.kanban-container {
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+    background-color: bisque;
+    border-radius: 5px;
+}
+
+.column-title{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.task {
+    padding: 5px;
+    background-color: white;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
