@@ -1,0 +1,32 @@
+// App.scss
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sidebar-collapsed .collapse-button {
+  right: 0;
+}
+
+.collapse-button {
+  position: fixed;
+  bottom: 0;
+  right: 185px;
+  width: 60px;
+  height: 30px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  transition: right 0.3s ease;
+}
+
+.collapse-button:hover {
+  background-color: #f1f1f1;
+}
