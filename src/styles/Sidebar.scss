@@ -1,0 +1,67 @@
+// Sidebar.scss
+
+.sidebar {
+    width: 185px;
+    background-color: white;
+}
+
+.sidebar {
+    width: 185px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.collapsed {
+    width: 60px;
+}
+
+.sidebar-top {
+    padding: 10px;
+}
+
+.sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.sidebar-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.sidebar-bottom {
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.company-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.company {
+    font-size: 12px
+}
