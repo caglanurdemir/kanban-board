@@ -5,9 +5,9 @@ export const moveTaskToDone = (task) => {
     };
 }
 
-export const moveTaskToTodo = (task) => {
+export const moveTaskToTodo = (taskId) => {
     return {
         type: 'MOVE_TASK_TO_TODO',
-        payload: task,
+        payload: taskId,
     };
-}
+};
