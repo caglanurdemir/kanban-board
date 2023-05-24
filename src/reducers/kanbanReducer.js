@@ -1,7 +1,4 @@
-const initialState = {
-    todoTasks: ['Task 1', 'Task 2', 'Task 3'],
-    doneTasks: []
-};
+import { initialState } from "../initialStore/initial";
 
 const kanbanReducer = (state = initialState, action) => {
     switch (action.type) {
