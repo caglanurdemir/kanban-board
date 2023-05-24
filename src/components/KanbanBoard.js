@@ -58,27 +58,29 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
             <div>
                 <img src={lineHorizontal} alt="Line Horizontal" />
             </div>
-            {/* TO-DO column */}
-            {/* <div className="column">
-                <div className="column-title">TO-DO</div>
-                {todoTasks.map((task, index) => (
-                    <div key={index} className="task">
-                        {task}
-                        <button onClick={() => handleTaskMoveToDone(task)}>Move to Done</button>
-                    </div>
-                ))}
-            </div> */}
+            <div className="kanban-main-board">
+                {/* TO-DO column */}
+                <div className="column">
+                    <div className="column-title">TO-DO</div>
+                    {todoTasks.map((task, index) => (
+                        <div key={index} className="task">
+                            {task}
+                            <button onClick={() => handleTaskMoveToDone(task)}>Move to Done</button>
+                        </div>
+                    ))}
+                </div>
 
-            {/* DONE column */}
-            {/* <div className="column">
-                <div className="column-title">DONE</div>
-                {doneTasks.map((task, index) => (
-                    <div key={index} className="task">
-                        {task}
-                        <button onClick={() => handleTaskMoveToTodo(task)}>Move to To-Do</button>
-                    </div>
-                ))}
-            </div> */}
+                {/* DONE column */}
+                <div className="column">
+                    <div className="column-title">DONE</div>
+                    {doneTasks.map((task, index) => (
+                        <div key={index} className="task">
+                            {task}
+                            <button onClick={() => handleTaskMoveToTodo(task)}>Move to To-Do</button>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 };
