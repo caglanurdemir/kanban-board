@@ -1,17 +1,12 @@
 .sidebar {
-    width: 185px;
-    background-color: white;
-}
-
-.sidebar {
-    width: 185px;
+    min-width: 185px;
     background-color: white;
     transition: width 0.3s ease;
 }
 
-.collapsed {
-    width: 60px;
-}
+// .collapsed {
+//     width: 60px;
+// }
 
 .sidebar-top {
     padding: 10px;

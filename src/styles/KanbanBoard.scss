@@ -1,28 +1,49 @@
 .kanban-container {
-    display: flex;  
-    flex-direction: row;
+    
+}
+
+.board-header {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: flex-start;
-
+    height: 64px;
+    padding: 0 16px;
 }
 
-.column {
-    flex: 1;
-    padding: 10px;
-    background-color: bisque;
-    border-radius: 5px;
+.board-header-left {
+    display: flex;
+    align-items: center;
 }
 
-.column-title{
-    text-align: center;
-    font-size: 1.5rem;
+.board-header-button {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.board-header-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.board-header-text {
+    margin-right: 16px;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
-.task {
-    padding: 5px;
-    background-color: white;
-    border-radius: 3px;
-    margin-bottom: 5px;
+.board-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.board-header-right img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
 }

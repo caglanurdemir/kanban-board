@@ -5,21 +5,15 @@ import Sidebar from './components/Sidebar';
 import './App.scss';
 
 const App = () => {
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
-
-  const handleToggleSidebar = () => {
-    setSidebarCollapsed(!sidebarCollapsed);
-  };
 
   return (
     <div className="app">
       <Header />
-      <div className={`content ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
+      <div className='page'>
         <Sidebar />
-        <KanbanBoard />
-        <button className="collapse-button" onClick={handleToggleSidebar}>
-          {sidebarCollapsed ? '>' : '<'}
-        </button>
+        <div className="main-content">
+          <KanbanBoard />
+        </div>
       </div>
     </div>
   );

@@ -1,62 +1,53 @@
 // Header.scss
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #ffffff;
-  }
-  
-  .header-left {
-    display: flex;
-    align-items: center;
-  }
-  
-//   .producterLogo {
-//     width: 80px;
-//     height: auto;
-//     margin-right: 10px;
-//   }
-  
-  .search-bar {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-    background-color: rgba(140, 151, 172, 0.07);
-    border-radius: 5px;
-    padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ffffff;
+}
 
-    height: 32px;
-    width: 200px;
-    left: 24px;
-    top: 12px;
+.header-left {
+  display: flex;
+  align-items: center;
+}
 
-  }
-  
-  .search-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-  }
-  
-  .search-input {
-    border: none;
-    outline: none;
-    // color: rgba(140, 151, 172, 1);
-    background-color: transparent;
-  }
-  
-  .icon {
-    width: 42   px;
-    height: 42px;
-    margin-left: 10px;
-  }
-  
-  .header-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  // Add additional styles as needed
-  
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  background-color: rgba(140, 151, 172, 0.07);
+  border-radius: 5px;
+  padding: 5px;
+
+  height: 32px;
+  width: 200px;
+  left: 24px;
+  top: 12px;
+
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  // color: rgba(140, 151, 172, 1);
+  background-color: transparent;
+}
+
+.icon {
+  width: 42 px;
+  height: 42px;
+  margin-left: 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
