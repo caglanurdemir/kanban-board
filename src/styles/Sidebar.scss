@@ -2,8 +2,16 @@
     min-width: 185px;
     background-color: white;
     transition: width 0.3s ease;
-    overflow-y: auto; /* Add this line */
-    overflow-x: hidden; /* Disable horizontal scrolling */
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    font-feature-settings: 'liga' off;
+    color: #405175;
 }
 
 .sidebar-top {
@@ -29,27 +37,3 @@
     height: 20px;
     margin-right: 10px;
 }
-
-.sidebar-bottom {
-    padding: 10px;
-    position: absolute;
-    bottom: 10px;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.company-logo {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-.user-details {
-    display: flex;
-    flex-direction: column;
-}
- 

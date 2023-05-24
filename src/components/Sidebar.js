@@ -57,14 +57,14 @@ const Sidebar = () => {
                     <img src={bell} alt="Notifications" />
                     Notifications
                 </button>
-                <div className="sidebar-button">
+                <button className="sidebar-button">
                     <img src={name} alt="Name Surname" />
                     Name Surname
-                </div>
-                <div className="sidebar-button">
+                </button>
+                <button className="sidebar-button">
                     <img src={company} alt="Company Logo" />
                     Company
-                </div>
+                </button>
             </div>
         </div>
     );
