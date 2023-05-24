@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/Sidebar.scss';
 import dashboard from '../assets/sidebarIcons/dashboard.svg';
 import chat from '../assets/sidebarIcons/chat.svg';
@@ -12,14 +12,14 @@ import help from '../assets/sidebarIcons/chat-alt.svg';
 import plus from '../assets/sidebarIcons/plus.svg';
 
 const Sidebar = () => {
-    const [collapsed, setCollapsed] = useState(false);
+    // const [collapsed, setCollapsed] = useState(false);
 
-    const handleToggleCollapse = () => {
-        setCollapsed(!collapsed);
-    };
+    // const handleToggleCollapse = () => {
+    //     setCollapsed(!collapsed);
+    // };
 
     return (
-        <div className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
+        <div className={`sidebar`}>
             <div className="sidebar-top">
                 <div className="sidebar-buttons">
                     <button className="sidebar-button">
