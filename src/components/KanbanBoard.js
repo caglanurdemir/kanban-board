@@ -17,7 +17,7 @@ import lineHorizontal from '../assets/kanbanIcons/lineHorizontal.svg';
 const Task = ({ task, column, moveTask }) => {
     const [{ isDragging }, drag] = useDrag({
         type: "TASK",
-        item: { id: task.id, column }, // Include the 'column' property
+        item: { id: task.id, column },
         collect: (monitor) => ({
             isDragging: monitor.isDragging()
         })

@@ -29,7 +29,7 @@ const Header = () => {
                 <img
                     src={plusIcon}
                     alt="Plus Icon"
-                    className="icon"
+                    className="plus-icon"
                     onClick={handlePlusIconClick}
                 />
             </div>
