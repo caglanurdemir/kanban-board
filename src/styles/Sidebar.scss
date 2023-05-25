@@ -1,21 +1,10 @@
 .sidebar {
     min-width: 185px;
     background-color: white;
-    transition: width 0.3s ease;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    font-feature-settings: 'liga' off;
-    color: #405175;
-}
-
-.sidebar-top {
-    padding: 10px;
+    padding-top: 24px;
 }
 
 .sidebar-buttons {
@@ -26,14 +15,41 @@
 .sidebar-button {
     display: flex;
     align-items: center;
-    padding: 10px;
     border: none;
     background-color: transparent;
     cursor: pointer;
+    margin-left: 20px;
+    margin-right: 8px;
+    margin-bottom: 24px;
 }
 
-.sidebar-button img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+.sidebar-button text {
+    margin-left: 8px;
+}
+
+.icons {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+.sidebar-button-user {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 8px;
+    margin-bottom: 16px;
+}
+
+.line {
+    margin-bottom: 16px;
+}
+
+.user-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
 }
