@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
-import { DndProvider, useDrag, useDrop } from "react-dnd";
+import Task from "./Task";
+import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { moveTaskToDone, moveTaskToTodo } from "../actions/kanbanActions";
 import '../styles/KanbanBoard.scss';
@@ -13,37 +14,9 @@ import sortColumn from '../assets/kanbanIcons/sortColumn.svg';
 import sort from '../assets/kanbanIcons/sort.svg';
 import line from '../assets/kanbanIcons/line.svg';
 import lineHorizontal from '../assets/kanbanIcons/lineHorizontal.svg';
-
-const Task = ({ task, column, moveTask }) => {
-    const [{ isDragging }, drag] = useDrag({
-        type: "TASK",
-        item: { id: task.id, column },
-        collect: (monitor) => ({
-            isDragging: monitor.isDragging()
-        })
-    });
-
-    const [,] = useDrop({
-        accept: "TASK",
-        drop: (item) => {
-            const taskId = item.id;
-            const column = item.column;
-            if (column === "DONE") {
-                moveTask(taskId);
-            } else if (column === "TODO") {
-                moveTask(taskId);
-            }
-        }
-    });
-
-    const opacity = isDragging ? 0.5 : 1;
-
-    return (
-        <div ref={drag} style={{ opacity }} className="task">
-            {task.text}
-        </div>
-    );
-};
+import todoIcon from '../assets/kanbanIcons/todoIcon.svg';
+import doneIcon from '../assets/kanbanIcons/doneIcon.svg';
+import columnLine from '../assets/kanbanIcons/columnLine.svg';
 
 const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) => {
 
@@ -95,7 +68,11 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                 <div className="kanban-main-board">
                     {/* TO-DO column */}
                     <div className="column">
-                        <div className="column-title">TO-DO</div>
+                        <div className="column-title">
+                            <img src={todoIcon} alt="To-Do Icon" className="column-icon" />
+                            TO-DO
+                        </div>
+                        <img src={columnLine} alt="Column Line" className="column-line" />
                         {todoTasks.map((task, index) => (
                             <Task
                                 key={index}
@@ -108,7 +85,11 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
 
                     {/* DONE column */}
                     <div className="column">
-                        <div className="column-title">DONE</div>
+                        <div className="column-title">
+                            <img src={doneIcon} alt="Done Icon" className="column-icon" />
+                            DONE
+                        </div>
+                        <img src={columnLine} alt="Column Line" className="column-line" />
                         {doneTasks.map((task, index) => (
                             <Task
                                 key={index}
