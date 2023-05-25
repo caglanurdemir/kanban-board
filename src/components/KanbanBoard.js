@@ -60,18 +60,18 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
             <div className="kanban-container">
                 <div className="board-header">
                     <div className="board-header-left">
-                        <img src={leftArrow} alt="Left Arrow" className="board-header-icon" />
-                        <img src={line} alt="Icon 1" className="board-header-icon" />
+                        <img src={leftArrow} alt="Left Arrow" className="arrow-icon" />
+                        <img src={line} alt="Icon 1" className="line-icon" />
                         <button className="board-header-button">
                             <img src={sprint} alt="Sprint" className="board-header-icon" />
                             SPR-06
                         </button>
-                        <img src={line} alt="Icon 1" className="board-header-icon" />
+                        <img src={line} alt="Icon 1" className="line-icon" />
                         <button className="board-header-button">
                             <img src={peopleBlue} alt="Icon 2" className="board-header-icon" />
                             TEAM-10
                         </button>
-                        <img src={line} alt="Icon 1" className="board-header-icon" />
+                        <img src={line} alt="Icon 1" className="line-icon" />
                         <span className="board-header-text">New Sprint Name</span>
                         <button className="board-header-button">
                             <img src={calendar} alt="Icon 3" className="board-header-icon" />
@@ -79,12 +79,12 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                         <button className="board-header-button">
                             <img src={people} alt="Icon 4" className="board-header-icon" />
                         </button>
-                        <button className="board-header-button">
+                        <button className="complete-button">
                             Complete Sprint
                         </button>
                     </div>
                     <div className="board-header-right">
-                        <img src={line} alt="Icon 1" className="board-header-icon" />
+                        <img src={line} alt="Icon 1" className="line-icon" />
                         <img src={sortColumn} alt="Icon 2" className="board-header-icon" />
                         <img src={sort} alt="Icon 3" className="board-header-icon" />
                     </div>

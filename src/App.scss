@@ -12,13 +12,11 @@
 }
 .page {
   display: flex;
-  flex-grow: 1;
   flex-direction: row;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 .main-content {
-  flex-grow: 1;
-  padding: 16px;
+  overflow: auto;
   background-color: rgba(140, 151, 172, 0.07);
 }
