@@ -11,3 +11,10 @@ export const moveTaskToTodo = (taskId) => {
         payload: taskId,
     };
 };
+
+export const addTaskToTodo = (task) => {
+    return {
+        type: 'ADD_TASK_TO_TODO',
+        payload: task,
+    };
+}

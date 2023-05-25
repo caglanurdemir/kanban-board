@@ -44,6 +44,22 @@ const kanbanReducer = (state = initialState, action) => {
             }
 
             return state;
+        case 'ADD_TASK_TO_TODO':
+            const { todoTasks: todoTasks3 } = state;
+            const { text, importance, username, dueDate, taskOrEpc } = action.payload;
+
+            const newTask = {
+                text,
+                importance,
+                username,
+                dueDate,
+                taskOrEpc,
+            };
+
+            return {
+                ...state,
+                todoTasks: [...todoTasks3, newTask],
+            };
         default:
             return state;
     }

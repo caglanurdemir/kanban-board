@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/Header.scss';
+import ModalComponent from './ModalComponent';
 import producterLogo from '../assets/headerIcons/producterLogo.svg';
 import filterIcon from '../assets/headerIcons/filterIcon.svg';
 import filterIcon2 from '../assets/headerIcons/filterIcon2.svg';
@@ -7,6 +8,12 @@ import plusIcon from '../assets/headerIcons/plusIcon.svg';
 import search from '../assets/headerIcons/searchIcon.svg';
 
 const Header = () => {
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    const handlePlusIconClick = () => {
+        setModalOpen(true);
+    };
+
     return (
         <div className="header">
             <div className="header-left">
@@ -19,8 +26,14 @@ const Header = () => {
                 <img src={filterIcon2} alt="Filter Icon 2" className="icon" />
             </div>
             <div className="header-right">
-                <img src={plusIcon} alt="Plus Icon" className="icon" />
+                <img
+                    src={plusIcon}
+                    alt="Plus Icon"
+                    className="icon"
+                    onClick={handlePlusIconClick}
+                />
             </div>
+            {isModalOpen && <ModalComponent onClose={() => setModalOpen(false)} />}
         </div>
     );
 };
