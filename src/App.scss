@@ -13,10 +13,10 @@
 .page {
   display: flex;
   flex-direction: row;
-  overflow: auto;
+  // overflow: auto;
 }
 
 .main-content {
-  overflow: auto;
+  // overflow: auto;
   background-color: rgba(140, 151, 172, 0.07);
 }

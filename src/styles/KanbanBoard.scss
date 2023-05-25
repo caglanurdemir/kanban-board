@@ -1,12 +1,14 @@
 .kanban-main-board {
     display: flex;
+    margin-left: 22px;
+    margin-top: 24px;
 }
 
 .column {
     width: 290px;
     height: 732px;
-    padding: 16px;
-    margin: 8px;
+    margin-right: 15px;
+    padding: 26px;
     background-color: #ffffff;
     border-radius: 4px;
     margin-bottom: 24px;
@@ -105,10 +107,11 @@
 .board-header-right {
     display: flex;
     align-items: center;
+    margin-right: 4px;
 }
 
-.board-header-right img {
+.board-header-right-icon {
     width: 24px;
     height: 24px;
-    margin-right: 8px;
+    margin-left: 8px;
 }

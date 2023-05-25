@@ -85,8 +85,8 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                     </div>
                     <div className="board-header-right">
                         <img src={line} alt="Icon 1" className="line-icon" />
-                        <img src={sortColumn} alt="Icon 2" className="board-header-icon" />
-                        <img src={sort} alt="Icon 3" className="board-header-icon" />
+                        <img src={sortColumn} alt="Icon 2" className="board-header-right-icon" />
+                        <img src={sort} alt="Icon 3" className="board-header-right-icon" />
                     </div>
                 </div>
                 <div>
