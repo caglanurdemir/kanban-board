@@ -56,7 +56,7 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                             <img src={people} alt="Icon 4" className="board-header-icon" />
                         </button>
                         <button className="complete-button">
-                            Complete Sprint
+                            <span className="complete-button-text">Complete Sprint</span>
                         </button>
                     </div>
                     <div className="board-header-right">
