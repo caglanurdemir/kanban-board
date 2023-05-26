@@ -74,8 +74,8 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                         <div className="column-title">
                             <img src={todoIcon} alt="To-Do Icon" className="column-icon" />
                             <span className="todo-done-text">TO-DO</span>
-                            <div class="rectangle-blue">
-                                <span class="number-blue">{totalTodoDueDate}</span>
+                            <div className="rectangle-blue">
+                                <span className="number-blue">{totalTodoDueDate}</span>
                             </div>
                         </div>
                         <img src={columnLine} alt="Column Line" className="column-line" />
@@ -95,8 +95,8 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                         <div className="column-title">
                             <img src={doneIcon} alt="Done Icon" className="column-icon" />
                             <span className="todo-done-text">DONE</span>
-                            <div class="rectangle-blue">
-                                <span class="number-blue">{totalDoneDueDate}</span>
+                            <div className="rectangle-blue">
+                                <span className="number-blue">{totalDoneDueDate}</span>
                             </div>
                         </div>
                         <img src={columnLine} alt="Column Line" className="column-line" />
