@@ -41,10 +41,10 @@ const ModalComponent = ({ addTaskToTodo, onClose }) => {
                 </div>
                 <div className="form-group">
                     <label>Importance</label>
-                    <select value={importance} onChange={(e) => setImportance(parseInt(e.target.value))}>
-                        <option value={1}>Low</option>
-                        <option value={2}>Medium</option>
-                        <option value={3}>High</option>
+                    <select value={importance} onChange={(e) => setImportance(e.target.value)}>
+                        <option value='low'>Low</option>
+                        <option value='medium'>Medium</option>
+                        <option value='high'>High</option>
                     </select>
                 </div>
                 <div className="form-group">
