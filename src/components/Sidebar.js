@@ -11,6 +11,7 @@ import name from '../assets/sidebarIcons/name.svg';
 import help from '../assets/sidebarIcons/chat-alt.svg';
 import plus from '../assets/sidebarIcons/plus.svg';
 import line from '../assets/sidebarIcons/line.svg';
+import dot from '../assets/sidebarIcons/dot.svg';
 
 const Sidebar = () => {
     return (
@@ -25,9 +26,10 @@ const Sidebar = () => {
                         <img src={chat} alt="Feedback" className='icons' />
                         <span className='sidebar-button-text'>Feedback</span>
                     </button>
-                    <button className="sidebar-button">
-                        <img src={task} alt="Task" className='icons' />
-                        <span className='sidebar-button-text'>Task</span>
+                    <button className="sidebar-button-task">
+                        <img src={task} alt="Task" className='icons-task' />
+                        <span className='sidebar-button-text-task'>Task</span>
+                        <img src={dot} className="selected-button" />
                     </button>
                     <button className="sidebar-button">
                         <img src={explore} alt="Roadmap" className='icons' />

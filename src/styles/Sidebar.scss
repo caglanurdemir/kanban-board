@@ -34,6 +34,35 @@
     color: rgba(64, 81, 117, 1);
 }
 
+.sidebar-button-task {
+    width: 161px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    border: none;
+    // background-color: transparent;
+    color: white;
+    background-color: rgba(45, 112, 253, 1);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 8px;
+    margin-bottom: 24px;
+}
+
+.icons-task {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    color: white;
+}
+
+.selected-button {
+    width: 5px;
+    height: 5px;
+    margin-left: auto;
+}
+
 .icons {
     width: 16px;
     height: 16px;
