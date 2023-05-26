@@ -41,7 +41,7 @@ const Task = ({ task, column, moveTask, count }) => {
             <span className="task-text">{task.text}</span>
             <div className="task-items">
                 <img src={task.taskOrEpc === 'task' ? taskIcon : epcIcon} alt="task icon" className="task-epc-icon" />
-                <span>{task.taskOrEpc === 'task' ? `TSK-0${count}` : `EPC-0${count}`}</span>
+                <span className="tsk-epc-text">{task.taskOrEpc === 'task' ? `TSK-0${count}` : `EPC-0${count}`}</span>
                 <img src={task.importance === 'low' ? low : task.importance === 'medium' ? medium : high} alt="priority icon" className="priority-icon" />
                 <div class="rectangle">
                     <span class="number">{task.dueDate}</span>

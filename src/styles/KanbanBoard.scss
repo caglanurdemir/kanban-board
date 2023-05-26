@@ -34,6 +34,15 @@
     margin-bottom: 16px;
 }
 
+.todo-done-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.018em;
+    color: rgba(0, 23, 71, 1);
+}
+
 .task {
     width: 242px;
     margin-left: 24px;
@@ -105,6 +114,20 @@
     display: block;
     margin: 12px;
     text-align: left;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(64, 81, 117, 1);
+}
+
+.tsk-epc-text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 24px;
+    font-feature-settings: 'liga' off;
+    color: rgba(140, 151, 172, 1);
 }
 
 .board-header {
@@ -130,12 +153,35 @@
 .board-header-icon {
     width: 16px;
     height: 16px;
-    margin-left: 8px;
+    margin-left: 4px;
     margin-right: 4px;
 }
 
-.line-icon {
+.board-header-text {
     margin-left: 4px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    font-feature-settings: 'liga' off;
+    color: rgba(64, 81, 117, 1);
+}
+
+.board-header-bold-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height */
+
+    font-feature-settings: 'liga' off;
+    color: rgba(0, 23, 71, 1);
+
+}
+
+.line-icon {
+    margin-left: 8px;
 }
 
 .arrow-icon {
@@ -153,10 +199,6 @@
     width: 129px;
     height: 32px;
     margin-left: 20px;
-}
-
-.board-header-text {
-    margin-left: 8px;
 }
 
 .board-header-right {

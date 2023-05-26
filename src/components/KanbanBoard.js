@@ -40,15 +40,15 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                         <img src={line} alt="Icon 1" className="line-icon" />
                         <button className="board-header-button">
                             <img src={sprint} alt="Sprint" className="board-header-icon" />
-                            SPR-06
+                            <span className="board-header-text">SPR-06</span>
                         </button>
                         <img src={line} alt="Icon 1" className="line-icon" />
                         <button className="board-header-button">
                             <img src={peopleBlue} alt="Icon 2" className="board-header-icon" />
-                            TEAM-10
+                            <span className="board-header-text">TEAM-10</span>
                         </button>
                         <img src={line} alt="Icon 1" className="line-icon" />
-                        <span className="board-header-text">New Sprint Name</span>
+                        <span className="board-header-bold-text">New Sprint Name</span>
                         <button className="board-header-button">
                             <img src={calendar} alt="Icon 3" className="board-header-icon" />
                         </button>
@@ -73,7 +73,7 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                     <div className="column">
                         <div className="column-title">
                             <img src={todoIcon} alt="To-Do Icon" className="column-icon" />
-                            TO-DO
+                            <span className="todo-done-text">TO-DO</span>
                             <div class="rectangle-blue">
                                 <span class="number-blue">{totalTodoDueDate}</span>
                             </div>
@@ -94,7 +94,7 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                     <div className="column">
                         <div className="column-title">
                             <img src={doneIcon} alt="Done Icon" className="column-icon" />
-                            DONE
+                            <span className="todo-done-text">DONE</span>
                             <div class="rectangle-blue">
                                 <span class="number-blue">{totalDoneDueDate}</span>
                             </div>

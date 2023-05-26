@@ -19,48 +19,48 @@ const Sidebar = () => {
                 <div className="sidebar-buttons">
                     <button className="sidebar-button">
                         <img src={dashboard} alt="Dashboard" className='icons' />
-                        Dashboard
+                        <span className='sidebar-button-text'>Dashboard</span>
                     </button>
                     <button className="sidebar-button">
                         <img src={chat} alt="Feedback" className='icons' />
-                        Feedback
+                        <span className='sidebar-button-text'>Feedback</span>
                     </button>
                     <button className="sidebar-button">
                         <img src={task} alt="Task" className='icons' />
-                        Task
+                        <span className='sidebar-button-text'>Task</span>
                     </button>
                     <button className="sidebar-button">
                         <img src={explore} alt="Roadmap" className='icons' />
-                        Roadmap
+                        <span className='sidebar-button-text'>Roadmap</span>
                     </button>
                     <button className="sidebar-button">
                         <img src={repeat} alt="Changelog" className='icons' />
-                        Changelog
+                        <span className='sidebar-button-text'>Changelog</span>
                     </button>
                 </div>
             </div>
             <div className="sidebar-bottom">
                 <button className="sidebar-button">
                     <img src={plus} alt="Invite People" className='icons' />
-                    Invite People
+                    <span className='sidebar-button-text'>Invite People</span>
                 </button>
                 <button className="sidebar-button">
                     <img src={help} alt="Help Community" className='icons' />
-                    Help Community
+                    <span className='sidebar-button-text'>Help Community</span>
                 </button>
                 <button className="sidebar-button-user">
                     <img src={bell} alt="Notifications" className='icons' />
-                    Notifications
+                    <span className='sidebar-button-text'>Notifications</span>
                 </button>
                 <img src={line} alt="Line" className='line' />
                 <button className="sidebar-button-user">
                     <img src={name} alt="Name Surname" className='user-logo' />
-                    Name Surname
+                    <span className='sidebar-button-user-text'>Neil Larkins</span>
                 </button>
                 <img src={line} alt="Line" className='line' />
                 <button className="sidebar-button-user">
                     <img src={company} alt="Company Logo" className='user-logo' />
-                    Company
+                    <span className='sidebar-button-user-text'>Epodpay Inc.</span>
                 </button>
             </div>
         </div>
