@@ -37,10 +37,74 @@
 .task {
     width: 242px;
     margin-left: 24px;
+    margin-right: 24px;
     background-color: #fff;
     border-radius: 4px;
-    margin-bottom: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    border: 1px solid rgba(0, 23, 71, 0.05);
+}
+
+.rectangle-blue {
+    min-width: 24px;
+    height: 24px;
+    background-color: rgba(45, 112, 253, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-right: 24px;
+    margin-left: auto;
+}
+
+.number-blue {
+    color: rgba(45, 112, 253, 1);
+    font-size: 13px;
+}
+
+.task-items {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    margin-top: 4px;
+}
+
+.task-epc-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.rectangle {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 23, 71, 0.1);
+    border-radius: 4px;
+}
+
+.number {
+    color: rgba(0, 23, 71, 1);
+    font-size: 13px;
+}
+
+.priority-icon {
+    margin-left: auto;
+    margin-right: 12px;
+}
+
+.task-items .user-icon {
+    margin-left: 12px;
+}
+
+.task-text {
+    display: block;
+    margin: 12px;
+    text-align: left;
 }
 
 .board-header {

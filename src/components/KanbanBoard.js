@@ -20,6 +20,9 @@ import columnLine from '../assets/kanbanIcons/columnLine.svg';
 
 const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) => {
 
+    const totalTodoDueDate = todoTasks.reduce((total, task) => total + task.dueDate, 0);
+    const totalDoneDueDate = doneTasks.reduce((total, task) => total + task.dueDate, 0);
+
     const handleTaskMoveToDone = (taskId) => {
         moveTaskToDone(taskId);
     };
@@ -71,6 +74,9 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                         <div className="column-title">
                             <img src={todoIcon} alt="To-Do Icon" className="column-icon" />
                             TO-DO
+                            <div class="rectangle-blue">
+                                <span class="number-blue">{totalTodoDueDate}</span>
+                            </div>
                         </div>
                         <img src={columnLine} alt="Column Line" className="column-line" />
                         {todoTasks.map((task, index) => (
@@ -79,6 +85,7 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                                 task={task}
                                 column="TODO"
                                 moveTask={handleTaskMoveToDone}
+                                count={index + 1}
                             />
                         ))}
                     </div>
@@ -88,6 +95,9 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                         <div className="column-title">
                             <img src={doneIcon} alt="Done Icon" className="column-icon" />
                             DONE
+                            <div class="rectangle-blue">
+                                <span class="number-blue">{totalDoneDueDate}</span>
+                            </div>
                         </div>
                         <img src={columnLine} alt="Column Line" className="column-line" />
                         {doneTasks.map((task, index) => (
@@ -96,6 +106,7 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                                 task={task}
                                 column="DONE"
                                 moveTask={handleTaskMoveToTodo}
+                                count={index + 1}
                             />
                         ))}
                     </div>

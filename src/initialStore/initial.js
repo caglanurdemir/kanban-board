@@ -2,44 +2,44 @@ export const initialState = {
     todoTasks: [
         {
             text: 'Being able to rename and edit users lorem rename and edit users',
-            importance: 1,
+            importance: 'low',
             username: 'John',
             dueDate: 9,
             taskOrEpc: 'task'
         },
         {
             text: 'Being able to rename and edit users lorem rename and edit users',
-            importance: 2,
+            importance: 'medium',
             username: 'Jane',
             dueDate: 8,
-            taskOrEpc: 'task'
+            taskOrEpc: 'epc'
         },
         {
             text: 'Being able to rename and edit users lorem rename and edit users',
-            importance: 3,
+            importance: 'high',
             username: 'Alex',
             dueDate: 13,
-            taskOrEpc: 'task'
+            taskOrEpc: 'epc'
         }
     ],
     doneTasks: [
         {
             text: 'Being able to rename and edit users lorem rename and edit users',
-            importance: 1,
+            importance: 'low',
             username: 'John',
             dueDate: 9,
             taskOrEpc: 'task'
         },
         {
             text: 'Being able to rename and edit users lorem rename and edit users',
-            importance: 2,
+            importance: 'high',
             username: 'Jane',
             dueDate: 8,
-            taskOrEpc: 'task'
+            taskOrEpc: 'epc'
         },
         {
             text: 'Being able to rename and edit users lorem rename and edit users',
-            importance: 3,
+            importance: 'medium',
             username: 'Alex',
             dueDate: 13,
             taskOrEpc: 'task'
