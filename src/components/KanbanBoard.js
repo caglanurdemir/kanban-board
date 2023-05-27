@@ -23,13 +23,11 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
     const totalTodoDueDate = todoTasks.reduce((total, task) => total + task.dueDate, 0);
     const totalDoneDueDate = doneTasks.reduce((total, task) => total + task.dueDate, 0);
 
-    const handleTaskMoveToDone = (taskId) => {
-        moveTaskToDone(taskId);
-    };
-
-    const handleTaskMoveToTodo = (taskId) => {
-        moveTaskToTodo(taskId);
-    };
+    const handleTask = (column, task) => {
+        console.log(column, task);
+        if (column === 'TODO') moveTaskToDone(task);
+        if (column === 'DONE') moveTaskToTodo(task);
+    }
 
     return (
         <DndProvider backend={HTML5Backend}>
@@ -84,7 +82,7 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                                 key={index}
                                 task={task}
                                 column="TODO"
-                                moveTask={handleTaskMoveToDone}
+                                moveTask={handleTask}
                                 count={index + 1}
                             />
                         ))}
@@ -105,7 +103,7 @@ const KanbanBoard = ({ todoTasks, doneTasks, moveTaskToDone, moveTaskToTodo }) =
                                 key={index}
                                 task={task}
                                 column="DONE"
-                                moveTask={handleTaskMoveToTodo}
+                                moveTask={handleTask}
                                 count={index + 1}
                             />
                         ))}

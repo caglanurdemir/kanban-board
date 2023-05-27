@@ -12,32 +12,23 @@ import alex from '../assets/sidebarIcons/name.svg';
 
 
 const Task = ({ task, column, moveTask, count }) => {
-
     const [{ isDragging }, drag] = useDrag({
         type: "TASK",
-        item: { id: task.id, column },
+        item: { task, column },
         collect: (monitor) => ({
             isDragging: monitor.isDragging()
         })
     });
 
-    const [,] = useDrop({
+    const [, drop] = useDrop({
         accept: "TASK",
-        drop: (item) => {
-            const taskId = item.id;
-            const column = item.column;
-            if (column === "DONE") {
-                moveTask(taskId);
-            } else if (column === "TODO") {
-                moveTask(taskId);
-            }
-        }
+        drop: ({ column, task }) => moveTask(column, task)
     });
 
     const opacity = isDragging ? 0.5 : 1;
 
     return (
-        <div ref={drag} style={{ opacity }} className="task">
+        <div ref={node => drag(drop(node))} style={{ opacity }} className="task">
             <span className="task-text">{task.text}</span>
             <div className="task-items">
                 <img src={task.taskOrEpc === 'task' ? taskIcon : epcIcon} alt="task icon" className="task-epc-icon" />
@@ -48,7 +39,6 @@ const Task = ({ task, column, moveTask, count }) => {
                 </div>
                 <img src={task.username === 'Jane' ? jane : task.username === 'John' ? john : alex} alt="user icon" className="user-icon" />
             </div>
-
         </div>
     );
 };
