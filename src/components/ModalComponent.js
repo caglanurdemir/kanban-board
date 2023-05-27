@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { addTaskToTodo } from '../actions/kanbanActions';
 import '../styles/Modal.scss';
@@ -9,6 +9,30 @@ const ModalComponent = ({ addTaskToTodo, onClose }) => {
     const [username, setUsername] = useState('John');
     const [dueDate, setDueDate] = useState('');
     const [taskOrEpc, setTaskOrEpc] = useState('task');
+    const modalRef = useRef(null);
+
+    useEffect(() => {
+        const handleEscapeKey = (event) => {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        };
+
+        const handleClickOutside = (event) => {
+            if (modalRef.current && !modalRef.current.contains(event.target)) {
+                closeModal();
+            }
+        };
+
+        window.addEventListener('keydown', handleEscapeKey);
+        window.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            window.removeEventListener('keydown', handleEscapeKey);
+            window.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
 
     const handleAddTask = () => {
         const newTask = {
@@ -33,7 +57,7 @@ const ModalComponent = ({ addTaskToTodo, onClose }) => {
 
     return (
         <div className="modal-container">
-            <div className="modal-content">
+            <div className="modal-content" ref={modalRef}>
                 <h3>Add Task</h3>
                 <div className="form-group">
                     <span className='task-desc'>Task Description</span>

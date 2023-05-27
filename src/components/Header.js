@@ -10,8 +10,12 @@ import search from '../assets/headerIcons/searchIcon.svg';
 const Header = () => {
     const [isModalOpen, setModalOpen] = useState(false);
 
-    const handlePlusIconClick = () => {
+    const openModal = () => {
         setModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
     };
 
     return (
@@ -30,10 +34,10 @@ const Header = () => {
                     src={plusIcon}
                     alt="Plus Icon"
                     className="plus-icon"
-                    onClick={handlePlusIconClick}
+                    onClick={openModal}
                 />
             </div>
-            {isModalOpen && <ModalComponent onClose={() => setModalOpen(false)} />}
+            {isModalOpen && <ModalComponent onClose={closeModal} />}
         </div>
     );
 };
