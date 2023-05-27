@@ -36,32 +36,32 @@ const ModalComponent = ({ addTaskToTodo, onClose }) => {
             <div className="modal-content">
                 <h3>Add Task</h3>
                 <div className="form-group">
-                    <label>Text</label>
-                    <textarea value={text} onChange={(e) => setText(e.target.value)} />
+                    <span className='task-desc'>Task Description</span>
+                    <textarea className='task-textarea' value={text} onChange={(e) => setText(e.target.value)} />
                 </div>
-                <div className="form-group">
-                    <label>Importance</label>
-                    <select value={importance} onChange={(e) => setImportance(e.target.value)}>
+                <div className="form-group-selection">
+                    <span className='form-group-selection-text'>Importance</span>
+                    <select className='form-group-selection-select' value={importance} onChange={(e) => setImportance(e.target.value)}>
                         <option value='low'>Low</option>
                         <option value='medium'>Medium</option>
                         <option value='high'>High</option>
                     </select>
                 </div>
-                <div className="form-group">
-                    <label>Username</label>
-                    <select value={username} onChange={(e) => setUsername(e.target.value)}>
+                <div className="form-group-selection">
+                    <span className='form-group-selection-text'>Username</span>
+                    <select className='form-group-selection-select' value={username} onChange={(e) => setUsername(e.target.value)}>
                         <option value="John">John</option>
                         <option value="Jane">Jane</option>
                         <option value="Alex">Alex</option>
                     </select>
                 </div>
-                <div className="form-group">
-                    <label>Due Date</label>
-                    <input type="number" value={dueDate} onChange={(e) => setDueDate(e.target.value)} />
+                <div className="form-group-selection">
+                    <span className='form-group-selection-text'>Due Date</span>
+                    <input className='form-group-selection-select' type="number" value={dueDate} onChange={(e) => setDueDate(e.target.value)} />
                 </div>
-                <div className="form-group">
-                    <label>Task or EPC</label>
-                    <select value={taskOrEpc} onChange={(e) => setTaskOrEpc(e.target.value)}>
+                <div className="form-group-selection">
+                    <span className='form-group-selection-text'>Task or EPC</span>
+                    <select className='form-group-selection-select' value={taskOrEpc} onChange={(e) => setTaskOrEpc(e.target.value)}>
                         <option value="task">Task</option>
                         <option value="epc">EPC</option>
                     </select>
