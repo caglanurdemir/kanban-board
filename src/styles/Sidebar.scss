@@ -40,14 +40,14 @@
     display: flex;
     align-items: center;
     border: none;
-    // background-color: transparent;
     color: white;
     background-color: rgba(45, 112, 253, 1);
     border-radius: 4px;
     cursor: pointer;
     margin-left: 20px;
     margin-right: 8px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+    margin-top: -8px; //???????
 }
 
 .icons-task {
